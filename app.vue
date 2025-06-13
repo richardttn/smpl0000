@@ -1,10 +1,13 @@
+<script setup lang="ts">
+import AppSidebar from '@/components/AppSidebar.vue'
+import { SidebarProvider } from '@/components/ui/sidebar'
+</script>
+
 <template>
-  <div class="">
-    <NuxtLayout>
-    <div class="flex flex-col min-h-[20rem]">
-      <NuxtPage />
-    </div>
-  </NuxtLayout>
-  </div>
-  
+  <SidebarProvider>
+    <AppSidebar />
+    <main>
+      <RouterView />
+    </main>
+  </SidebarProvider>
 </template>
